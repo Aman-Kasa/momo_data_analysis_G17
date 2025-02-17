@@ -36,7 +36,6 @@ def extract_data(body_text, filename):
         else:
             data['receiver'] = 'Unknown'
             data['phone_number'] = 'Unknown'
-    
 
     if filename == "payment_code_holders.xml":
         receiver_match = code_holders_names_codes.search(body_text)
@@ -46,7 +45,7 @@ def extract_data(body_text, filename):
         else:
             data['receiver'] = 'Unknown'
             data['code'] = 0
-    
+
     if filename == "payments.xml":
         receiver_match = receiver_payment.search(body_text)
         if receiver_match:
@@ -57,19 +56,19 @@ def extract_data(body_text, filename):
     if filename == 'incoming_money.xml':
         sender_match = sender_pattern.search(body_text)
         data['sender'] = sender_match.group(1) if sender_match else 'Unknown'
-    
+
     if filename == 'cash_power.xml':
         token_match = cash_power_token.search(body_text)
         data['token'] = token_match.group(1) if token_match else 'Unknown'
-    
+
     if filename == 'third_party.xml':
         third_party_sender_match = third_party_sender_pattern.search(body_text)
         data['third_party_sender'] = third_party_sender_match.group(1) if third_party_sender_match else 'Unknown'
-    
+
     if filename == 'withdraw.xml':
         agent_match = agent.search(body_text)
         data['agent'] = agent_match.group(1) if agent_match else 'Unknown'
-    
+
     if filename == 'Failed.xml':
         failed_match = failed_transaction_pattern.search(body_text)
         if failed_match:
@@ -83,11 +82,11 @@ def extract_data(body_text, filename):
             data['receiver'] = 'MTN'
             data['amount'] = 0
             data['type'] = 'Mtn_Bundles'
-    
+
     if filename in ["Airtime.xml", "Bundles.xml", "cash_power.xml", "payment_code_holders.xml", "payments.xml", "payments.xml"]:
         TransactionId_match = transaction_Id.search(body_text)
         data['TransactionId'] = TransactionId_match.group(2) if TransactionId_match else 'Unknown'
-    
+
     amount_match = amount_pattern.search(body_text)
     if amount_match:
         amount = amount_match.group(1).replace(',', '')
@@ -132,7 +131,7 @@ def extract_data(body_text, filename):
             data['transaction_type'] = 'failed'
         else:
             data['transaction_type'] = 'unknown'
-    
+
     if filename != "Failed.xml":
 
         current_balance_match = current_balance_pattern.search(body_text)
@@ -143,7 +142,7 @@ def extract_data(body_text, filename):
             data['current_balance'] = new_balance
         else:
             data['current_balance'] = 0
-    
+
     if filename == "reversed.xml":
         balance_reversed_match = balance_reversed.search(body_text)
         if balance_reversed_match:

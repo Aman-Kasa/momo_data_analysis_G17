@@ -4,7 +4,6 @@ import json
 from dotenv import load_dotenv
 import os
 import datetime
-import re
 
 load_dotenv()
 
@@ -157,7 +156,6 @@ sqlstatements = [
     Balance INT,
     Fee INT
     );"""
-    
 ]
 
 for statement in sqlstatements:
@@ -326,8 +324,6 @@ file_to_table_mapping = {
     'cleaned_payment_code_holders.json': 'codeholders'
 }
 
-
-
 for file in json_files:
     try:
         file_name = file.split('/')[-1]
@@ -370,7 +366,7 @@ for file in json_files:
 
                         cursor.execute(sql, list(mapped_data.values()))
     except Exception as e:
-        print(f"Error occured: {e}")
+        print(f"Error occurred: {e}")
         continue
 
 conn.commit()

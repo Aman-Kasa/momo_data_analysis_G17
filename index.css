@@ -86,7 +86,7 @@ li {
 .nav-link:hover {
     display: flex;
     justify-content: center;
-    background-color: #ffa500; /* Light Orange */
+    background-color: #ff0000; /* Red */
     padding: 10px 0px;
     font-size: 20px;
     border-radius: 10px;
@@ -102,7 +102,7 @@ li {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #ffa500; /* Light Orange */
+    background-color: #ff0000; /* Red */
     padding: 10px 15px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -121,7 +121,7 @@ li {
     position: absolute;
     top: 5px;
     padding: 30px 30%;
-    background-color: #ffa500; /* Light Orange */
+    background-color: #ff0000; /* Red */
     border-radius: 10px;
     font-size: 25px;
 }
@@ -140,7 +140,7 @@ li {
 }
 
 .file-label:hover {
-    background-color: #e0a800;
+    background-color: #ff0000; /* Red */
 }
 
 .file-label i {
@@ -194,7 +194,7 @@ li {
 
 .title {
     font-size: 30px;
-    background-color: #ffa500; /* Light Orange */
+    background-color: #ff0000; /* Red */
     border-radius: 10px;
     font-weight: bold;
 }
@@ -221,7 +221,7 @@ li {
 }
 
 .fees, .fees p {
-    color: #d39c03;
+    color: #ff0000; /* Red */
     font-weight: bold;
 }
 
@@ -261,7 +261,7 @@ li {
     justify-content: center;
     align-items: center;
     font-size: 30px;
-    background-color: #ffa500; /* Light Orange */
+    background-color: #ff0000; /* Red */
     border-radius: 5px;
     font-weight: bold;
     width: 100%;
@@ -330,12 +330,12 @@ input[type="date"] {
 
 .transactions .search .placeholder:active {
     padding: 12px 30px;
-    border: #d39c03;
+    border: #ff0000; /* Red */
 }
 
 .transactions .search .fa-search {
     padding: 12px 20px;
-    background-color: #ffa500; /* Light Orange */
+    background-color: #ff0000; /* Red */
     border-radius: 2px;
     color: white;
     cursor: pointer;
@@ -368,14 +368,14 @@ input[type="date"] {
 .filter .transaction_types .fil > a {
     padding: 5px 10px;
     border-radius: 5px;
-    background-color: #ffa500; /* Light Orange */
+    background-color: #ff0000; /* Red */
     color: white;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
 
 .filter .transaction_types .fil > a:hover {
-    background-color: #e0a800;
+    background-color: #ff0000; /* Red */
 }
 
 .filter .transaction_types .fil > a.active {
@@ -496,7 +496,7 @@ tbody tr:hover {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #d39c03;
+    background: #ff0000; /* Red */
 }
 
 .fil > a.active {
@@ -549,7 +549,7 @@ tbody tr:hover {
 .chart-card1 h3 {
     text-align: center;
     padding: 10px 20px;
-    background-color: #e0a800;
+    background-color: #ff0000; /* Red */
     border-radius: 10px;
 }
 
@@ -578,7 +578,7 @@ tbody tr:hover {
 .chart-card h3 {
     text-align: center;
     padding: 10px 20px;
-    background-color: #e0a800;
+    background-color: #ff0000; /* Red */
     border-radius: 10px;
 }
 
@@ -623,7 +623,7 @@ tbody tr:hover {
     position: absolute;
     top: 5px;
     padding: 30px 30%;
-    background-color: #ffa500; /* Light Orange */
+    background-color: #ff0000; /* Red */
     border-radius: 10px;
     font-size: 25px;
 }
@@ -644,5 +644,5 @@ tbody tr:hover {
 }
 
 .dbutton:hover {
-    background-color: #e0a800;
+    background-color: #ff0000; /* Red */
 }

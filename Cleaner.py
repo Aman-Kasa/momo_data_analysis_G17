@@ -2,7 +2,6 @@ import re
 import os
 import xml.etree.ElementTree as ET
 import json
-import datetime
 
 os.makedirs('Data_Categorization/Cleaned_Data', exist_ok=True)
 

@@ -8,6 +8,7 @@ import MySQLdb
 import json
 from datetime import timedelta
 
+# Load environment variables from a .env file
 dotenv.load_dotenv()
 
 app = flask.Flask(__name__)
@@ -22,10 +23,10 @@ def file():
             with open('modified_sms_v2.xml', 'w') as f:
                 f.write(file)
             list_of_subprocesses = [
-                "/usr/bin/env sh prepare_me.sh",
-                "/usr/bin/env python3 Categorizer.py",
-                "/usr/bin/env python3 Cleaner.py",
-                "/usr/bin/env python3 Db_saver.py"
+                "sh prepare_me.sh",
+                "python3 Categorizer.py",
+                "python3 Cleaner.py",
+                "python3 Db_saver.py"
             ]
 
             for subprocess_command in list_of_subprocesses:
@@ -37,7 +38,7 @@ def file():
             print("Done")
             return jsonify({"message": "File processed successfully"}), 200
         else:
-            print("Upload A file")
+            print("No file uploaded")
             return jsonify({"error": "No file uploaded"}), 400
     except Exception as e:
         print(f"An error occurred: {e}")
@@ -46,7 +47,13 @@ def file():
 @app.route('/database_return', methods=['GET'])
 def db_return():
     try:
-        # subprocess.run("/usr/bin/env sh prepare_me.sh", shell=True, capture_output=True, text=True)
+        # Check if required environment variables are set
+        required_env_vars = ['MYSQL_HOST', 'MYSQL_USER', 'MYSQL_PASSWD', 'DB']
+        for var in required_env_vars:
+            if not os.getenv(var):
+                raise ValueError(f"Environment variable {var} is not set")
+
+        # Connect to the MySQL database
         conn = MySQLdb.connect(
             host=os.getenv('MYSQL_HOST'),
             user=os.getenv('MYSQL_USER'),
@@ -55,19 +62,19 @@ def db_return():
         )
         cursor = conn.cursor()
         sql_statements = [
-            """SELECT * FROM airtime""",
-            """SELECT * FROM bundles""",
-            """SELECT * FROM cashpower""",
-            """SELECT * FROM codeholders""",
-            """SELECT * FROM deposit""",
-            """SELECT * FROM failedtransactions""",
-            """SELECT * FROM incomingmoney""",
-            """SELECT * FROM nontransaction""",
-            """SELECT * FROM payments""",
-            """SELECT * FROM reversedtransactions""",
-            """SELECT * FROM thirdparty""",
-            """SELECT * FROM transfer""",
-            """SELECT * FROM withdraw"""
+            "SELECT * FROM airtime",
+            "SELECT * FROM bundles",
+            "SELECT * FROM cashpower",
+            "SELECT * FROM codeholders",
+            "SELECT * FROM deposit",
+            "SELECT * FROM failedtransactions",
+            "SELECT * FROM incomingmoney",
+            "SELECT * FROM nontransaction",
+            "SELECT * FROM payments",
+            "SELECT * FROM reversedtransactions",
+            "SELECT * FROM thirdparty",
+            "SELECT * FROM transfer",
+            "SELECT * FROM withdraw"
         ]
 
         results = {}

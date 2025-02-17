@@ -4,7 +4,10 @@ import os
 # Ensure the directory exists
 os.makedirs('Data_Categorization', exist_ok=True)
 
-tree = ET.parse(r'/mnt/c/Users/LENOVO/.vscode/MoMo-Data-Analysis/modified_sms_v2.xml')
+# Update the file path to the correct location of modified_sms_v2.xml
+file_path = 'modified_sms_v2.xml'
+
+tree = ET.parse(file_path)
 root = tree.getroot()
 
 incoming_money = []
@@ -40,10 +43,8 @@ for element in root:
                 payment_code_holders.append(ET.tostring(element, encoding='unicode'))
             elif 'bundle' in body_text:
                 Bundles.append(ET.tostring(element, encoding='unicode'))
-                
             else:
                 payments.append(ET.tostring(element, encoding='unicode'))
-
         elif 'bank deposit' in body_text:
             deposit.append(ET.tostring(element, encoding='unicode'))
         elif 'withdraw' in body_text:

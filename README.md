@@ -22,6 +22,7 @@ This project is designed for analyzing Momo data. It leverages various data anal
 2. Install dependencies:
     ```sh
     pip3 install -r requirements.txt
+    pip flask
     ```
 
 ## Usage

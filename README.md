@@ -91,7 +91,6 @@ This project is designed for analyzing Momo data. It leverages various data anal
 5. Open a pull request.
 
 ## License
-This project is licensed under the MIT License.
 
 ## Contact
-For inquiries, please contact [Aman-Kasa](https://github.com/Aman-Kasa).
+For inquiries, please contact [Aman-Kasa](https://github.com/Aman-Kasa).    email = a.kasa@alustudent.com

@@ -1,6 +1,6 @@
 # Momo Data Analysis Group-17
 
-![momo MTN](https://techfocus24.com/mtn-momo-vodafone-cash-enable-merchant-i/)
+![momo MTN](https://th.bing.com/th/id/OIP.rd1gGQ4YqM-35Rwuv9iBewHaE7?w=626&h=417&rs=1&pid=ImgDetMain)
 
 ## Overview
 This project is designed for analyzing Momo data. It leverages various data analysis techniques and tools to provide insights and visualizations.

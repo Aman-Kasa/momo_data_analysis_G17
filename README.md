@@ -1,6 +1,6 @@
 # Momo Data Analysis Group-17
 
-![momo MTN](https://th.bing.com/th/id/OIP.rd1gGQ4YqM-35Rwuv9iBewHaE7?w=626&h=417&rs=1&pid=ImgDetMain)
+![momo MTN](https://www.techfocus24.com/wp-content/uploads/2023/03/2CAD7598-BBDB-4AE0-8A65-ECB4BFCBDF0C.jpeg)
 
 ## Overview
 This project is designed for analyzing Momo data. It leverages various data analysis techniques and tools to provide insights and visualizations.

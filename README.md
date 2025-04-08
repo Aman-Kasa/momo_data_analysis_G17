@@ -1,6 +1,6 @@
 # Momo Data Analysis Group-17
 
-![momo MTN](https://techfocus24.com/mtn-momo-vodafone-cash-enable-merchant-i/)
+![momo MTN](https://www.techfocus24.com/wp-content/uploads/2023/03/2CAD7598-BBDB-4AE0-8A65-ECB4BFCBDF0C.jpeg)
 
 ## Overview
 This project is designed for analyzing Momo data. It leverages various data analysis techniques and tools to provide insights and visualizations.
@@ -91,7 +91,6 @@ This project is designed for analyzing Momo data. It leverages various data anal
 5. Open a pull request.
 
 ## License
-This project is licensed under the MIT License.
 
 ## Contact
-For inquiries, please contact [Aman-Kasa](https://github.com/Aman-Kasa).
+For inquiries, please contact [Aman-Kasa](https://github.com/Aman-Kasa).    email = a.kasa@alustudent.com
